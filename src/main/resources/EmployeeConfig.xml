@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="employee01" class="org.example.Employees.Employee">
+        <property name="name" value="Mubin"></property>
+        <property name="phones">
+            <list>
+                <value>01774436194</value>
+                <value>01303215559</value>
+                <value>01572111113</value>
+                <null></null>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>London</value>
+                <value>Kwet</value>
+                <value>Dhaka</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="CSE111" value="Algorithms"></entry>
+                <entry key="CSE101" value="Basic Programming "></entry>
+                <entry key="CSE112" value="Database"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="name">Mubin</prop>
+                <prop key="password">xeroroot</prop>
+            </props>
+        </property>
+
+    </bean>
+
+
+
+</beans>
