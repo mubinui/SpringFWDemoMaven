@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Student;
 
 public class Address {
     private int zipcode;

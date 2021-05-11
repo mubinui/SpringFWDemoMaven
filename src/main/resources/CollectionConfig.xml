@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+        <!-- Stand Alone   Collections-->
+    <util:list list-class="java.util.LinkedList" id="myfriendes">
+<!--        we can use vector map and other collection and properties -->
+        <value>Mubin</value>
+        <value>Samindra</value>
+        <value>Uic</value>
+        <value>Sadia</value>
+        <value>Ferdous</value>
+
+    </util:list>
+    <util:map map-class="java.util.HashMap" id="myfees">
+        <entry key="A" value="1002"></entry>
+        <entry key="B" value="1003"/>
+        <entry key="C" value="1004"/>
+    </util:map>
+    <util:properties id="dbconfig">
+        <prop key="10001">com.spydo.uic.co</prop>
+        <prop key="name">Mubin Uic</prop>
+        <prop key="password">Abc!234</prop>
+
+    </util:properties>
+    <bean class="org.example.CollectionSA.Person" name="p1">
+        <property name="friends">
+            <ref bean="myfriendes"/>
+
+        </property>
+        <property name="feeStructure">
+            <ref bean="myfees"></ref>
+        </property>
+        <property name="properties">
+            <ref bean="dbconfig"/>
+        </property>
+    </bean>
+    <bean class="org.example.CollectionSA.Person" name="p2" p:friends-ref="myfriendes" p:feeStructure-ref="myfees" p:properties-ref="dbconfig"></bean>
+
+
+</beans>

@@ -11,5 +11,6 @@ public class EmployeeTester {
         System.out.println(employee.getCourses());
         System.out.println(employee.getPhones());
         System.out.println(employee);
+        System.out.println(employee.getPhones().getClass().getName());
     }
 }
